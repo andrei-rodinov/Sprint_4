@@ -1,4 +1,4 @@
-package pageObjects;
+package page_objects;
 
 import org.hamcrest.MatcherAssert;
 import org.junit.After;
@@ -19,6 +19,7 @@ public class MainPageAccordionTest {
     private final int indexNumber;
     private final String expectedAccordionHeader;
     private final String expectedAccordionText;
+    private final String mainTestPageUrl = "https://qa-scooter.praktikum-services.ru";
 
     public MainPageAccordionTest(int indexNumber, String expectedAccordionHeader, String expectedAccordionText) {
         this.indexNumber = indexNumber;
@@ -45,7 +46,6 @@ public class MainPageAccordionTest {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--no-sandbox", "--headless", "--disable-dev-shm-usage");
         driver = new ChromeDriver(options);
-        String mainTestPageUrl = "https://qa-scooter.praktikum-services.ru";
         driver.get(mainTestPageUrl);
     }
 

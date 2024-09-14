@@ -1,4 +1,4 @@
-package pageObjects;
+package page_objects;
 
 import org.hamcrest.MatcherAssert;
 import org.junit.After;
@@ -7,8 +7,6 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.safari.SafariDriver;
 
 import static org.hamcrest.Matchers.containsString;
@@ -28,6 +26,7 @@ public class OrderPageTest {
     private final String color;
     private final String comment;
     private final String expectedSuccessText = "Заказ оформлен";
+    private final String mainTestPageUrl = "https://qa-scooter.praktikum-services.ru";
 
     public OrderPageTest (String name, String surname, String address,
                           String metro, String phone, String date,
@@ -57,7 +56,6 @@ public class OrderPageTest {
         //options.addArguments("--no-sandbox", "--headless", "--disable-dev-shm-usage");
         //driver = new ChromeDriver(options);
         driver = new SafariDriver(); // в браузере Chrome тест падает
-        String mainTestPageUrl = "https://qa-scooter.praktikum-services.ru";
         driver.get(mainTestPageUrl);
     }
 
