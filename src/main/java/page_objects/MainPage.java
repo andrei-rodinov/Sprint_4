@@ -1,4 +1,4 @@
-package pageObjects;
+package page_objects;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -89,13 +89,6 @@ public class MainPage {
     public void clickAccordionHeader(int index) {
         driver.findElements(accordionHeader).get(index).click();
     }
-/*
-     // Метод для проверки раскрытия раскрывающегося списка
-    public boolean isAccordionTextDisplayed(int index) {
-        return driver.findElements(accordionText).get(index).isDisplayed();
-    }
-*/
-
 
     // Метод получения ссылки из логотипа Яндекс
     public String getHeaderLogoYandexLink() {
