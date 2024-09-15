@@ -1,4 +1,4 @@
-package page_objects;
+package pageobjects;
 
 import org.hamcrest.MatcherAssert;
 import org.junit.After;
